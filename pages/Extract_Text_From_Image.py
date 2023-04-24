@@ -15,7 +15,7 @@ pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
 
 
 def main():
-    st.title("OCR Images")
+    st.title("lazylearn(Text Extracter From Image)")
     
     uploaded_file = st.file_uploader("Upload your images:", type=["png", "jpg", "jpeg", "gif"])
     
