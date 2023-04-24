@@ -56,6 +56,11 @@ style_name = st.sidebar.selectbox(
     'Select HandWriting',
     ("Style-1", "Style-2", "normal-with-italic", "Style-4", "Style-5")
 )
+
+background = st.sidebar.selectbox(
+    'Select Background',
+    ("a1","a4")
+)
 root_style = "./images/"
 path_style = os.path.join(root_style, style_name+".jpg")
 root_font = "./Fonts/"
@@ -107,7 +112,13 @@ if uploaded_file is not None:
 
         lines = raw_text.split("\n")  # splitting text on the basis of new line
 
-        dt.background = Image.open("./images/a4.jpg")
+        if background is None:
+            dt.background = Image.open("./images/a4.jpg")
+        else:
+            if background == "a1":
+                dt.background = Image.open("./images/a1.jpg")
+            elif background == "a4":
+                dt.background = Image.open("./images/a4.jpg")
 
         dt.SheetWidth = dt.background.width
         dt.SheetHieght = dt.background.height
