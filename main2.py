@@ -9,8 +9,25 @@ from PdffromImage import do_work
 import PdffromImage as dt
 import docx2txt
 from PIL import ImageFile
+import PyPDF2
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
+
+
+@st.cache
+def pdfToText(path):
+    pdfreader = PyPDF2.PdfFileReader(path)
+    no_of_pages = pdfreader.numPages
+    with open('final_txt.txt', 'w') as f:
+        for i in range(0, no_of_pages):
+            pagObj = pdfreader.getPage(i)
+            f.write(pagObj.extractText())
+    with open('final_txt.txt', 'r') as f:
+        text = f.read()
+    if os.path.exists("final_txt.txt"):
+        # os.remove("final_txt.txt")
+        pass
+        return text
 
 def get_binary_file_downloader_html(bin_file, file_label='File'):
     with open(bin_file, 'rb') as f:
