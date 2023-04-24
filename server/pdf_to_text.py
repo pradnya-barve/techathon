@@ -1,23 +1,18 @@
+import PyPDF2
+import os
 
-
-if __name__ == '__main__':
-    try:
-        with open('sample.txt', 'r') as file:
-            data = file.read().replace('\n', '')
-        l=len(data)
-        nn=len(data)//600
-        chunks, chunk_size = len(data), len(data)//(nn+1)
-        p=[ data[i:i+chunk_size] for i in range(0, chunks, chunk_size) ]
-        
-        for i in range(0,len(p)):
-            worddd(p[i])
-            writee('\n')
-            BG.save('%doutt.png'%i)
-            BG1= Image.open("myfont/bg.png")
-            BG=BG1
-            gap = 0
-            _ =0
-    except ValueError as E:
-        print("{}\nTry again".format(E))
-
+def pdfToText(path):
+    pdfreader = PyPDF2.PdfFileReader(path)
+    no_of_pages = pdfreader.numPages
+    with open('final_txt.txt', 'w') as f:
+        for i in range(0, no_of_pages):
+            pagObj = pdfreader.getPage(i)
+            f.write(pagObj.extractText())
+    with open('final_txt.txt', 'r') as f:
+        text = f.read()
+    if os.path.exists("final_txt.txt"):
+        os.remove("final_txt.txt")
+        pass
+        return text
+    
 

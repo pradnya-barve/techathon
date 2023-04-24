@@ -49,6 +49,19 @@ def letterwrite(word):
             elif letter == '-':
                 letter = 'hiphen'
             writee(letter)
+
+def pdfToText(path):
+    pdfreader = PyPDF2.PdfFileReader(path)
+    no_of_pages = pdfreader.numPages
+    with open('final_txt.txt', 'w') as f:
+        for i in range(0, no_of_pages):
+            pagObj = pdfreader.getPage(i)
+            f.write(pagObj.extractText())
+    with open('final_txt.txt', 'r') as f:
+        text = f.read()
+    if os.path.exists("final_txt.txt"):
+        pass
+        return text
 def worddd(Input):
     wordlist=Input.split(' ')
     for i in wordlist:
@@ -113,6 +126,7 @@ if __name__ == '__main__':
 
     if file is not None:
         try:
+            text_data = pdfToText(file)
             with open('final_txt.txt', 'r') as file:
                 data = file.read().replace('\n', '')
             l=len(data)
