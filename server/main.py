@@ -1,11 +1,10 @@
 
-
-
 import streamlit as st
 import PyPDF2
 import os 
 from PIL import Image
 import pytesseract
+from PIL import Image
 from PIL import Image
 BG = Image.open("myfont/bg.png")
 sizeOfSheet =BG.width
@@ -55,20 +54,25 @@ def worddd(Input):
     for i in wordlist:
         letterwrite(i)
         writee('space')
-
-def pdfToText(path):
-    pdfreader = PyPDF2.PdfFileReader(path)
-    no_of_pages = pdfreader.numPages
-    with open('final_txt.txt', 'w') as f:
-        for i in range(0, no_of_pages):
-            pagObj = pdfreader.getPage(i)
-            f.write(pagObj.extractText())
-    with open('final_txt.txt', 'r') as f:
-        text = f.read()
-    if os.path.exists("final_txt.txt"):
-        pass
-        return text
-
+if __name__ == '__main__':
+    try:
+        with open('sample.txt', 'r') as file:
+            data = file.read().replace('\n', '')
+        l=len(data)
+        nn=len(data)//600
+        chunks, chunk_size = len(data), len(data)//(nn+1)
+        p=[ data[i:i+chunk_size] for i in range(0, chunks, chunk_size) ]
+        
+        for i in range(0,len(p)):
+            worddd(p[i])
+            writee('\n')
+            BG.save('%doutt.png'%i)
+            BG1= Image.open("myfont/bg.png")
+            BG=BG1
+            gap = 0
+            _ =0
+    except ValueError as E:
+        print("{}\nTry again".format(E))
 
 from fpdf import FPDF
 from PIL import Image
@@ -94,7 +98,6 @@ pdf_creation(imagelist.pop(0))
 #Appending them to pdfs
 for PNG_FILE in imagelist:
     pdf_creation(PNG_FILE,flag=True)
-
 st.title("document to handwritting convertor")
 st.write("upload your document and get it converted to handwritting")
 
@@ -110,13 +113,13 @@ if __name__ == '__main__':
 
     if file is not None:
         try:
-            with open('sample.txt', 'r') as file:
+            with open('final_txt.txt', 'r') as file:
                 data = file.read().replace('\n', '')
             l=len(data)
             nn=len(data)//600
             chunks, chunk_size = len(data), len(data)//(nn+1)
-            p=[ data[i:i+chunk_size] for i in range(0, chunks, chunk_size) ]
-            
+            p= [data[i:i+chunk_size] for i in range(0, chunks, chunk_size)]
+            print("value of p is ",p)
             for i in range(0,len(p)):
                 worddd(p[i])
                 writee('\n')
