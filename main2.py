@@ -88,6 +88,9 @@ if uploaded_file is not None:
     elif uploaded_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
 
         raw_text = docx2txt.process(uploaded_file)
+    
+    elif uploaded_file.type == "application/pdf":
+        raw_text = pdfToText(uploaded_file)
 
     ###########################
 
