@@ -25,8 +25,7 @@ def pdfToText(path):
     with open('final_txt.txt', 'r') as f:
         text = f.read()
     if os.path.exists("final_txt.txt"):
-        # os.remove("final_txt.txt")
-        pass
+        os.remove("final_txt.txt")
         return text
 
 def get_binary_file_downloader_html(bin_file, file_label='File'):
@@ -57,10 +56,6 @@ style_name = st.sidebar.selectbox(
     ("Style-1", "Style-2", "normal-with-italic", "Style-4", "Style-5")
 )
 
-background = st.sidebar.selectbox(
-    'Select Background',
-    ("a1","a4")
-)
 root_style = "./images/"
 path_style = os.path.join(root_style, style_name+".jpg")
 root_font = "./Fonts/"
@@ -112,13 +107,7 @@ if uploaded_file is not None:
 
         lines = raw_text.split("\n")  # splitting text on the basis of new line
 
-        if background is None:
-            dt.background = Image.open("./images/a4.jpg")
-        else:
-            if background == "a1":
-                dt.background = Image.open("./images/a1.jpg")
-            elif background == "a4":
-                dt.background = Image.open("./images/a4.jpg")
+        dt.background = Image.open("./images/a4.jpg")
 
         dt.SheetWidth = dt.background.width
         dt.SheetHieght = dt.background.height
