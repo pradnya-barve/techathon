@@ -1,33 +1,512 @@
-RB TECH SERVICES
-AN IT SERVICE PROVIDERWhat is an Industrial Internship?
-ï‚—Academic Internships are a unique form of education 
-that integrates classroom study with planned and 
-supervised work experiences in the public and private 
-sectors. 
-ï‚—It allows students to acquire essential practice skills by 
-being exposed to the reality of the world of work beyond 
-the boundaries of the campus, enhancing their self 
-confidence and career direction towards industry.Key Features
-ï‚—100% Technical Knowledge
-ï‚—Practical Oriented Approach 
-ï‚—Job Opportunities
-ï‚—Hand On Live ProjectsTopics Covered
-ïƒ¼Module 1
-ï‚—UI / UX Design Concepts
-ï‚—Web based Application Development
-(PHP + JavaScript + CSS + HTML)
-ï‚—Full Stack Development
-ïƒ¼Module 2
-ï‚—Database Administration (MYSQL)Topics Covered
-ïƒ¼Module 3
-ï‚—Personality Development
-ï‚—Resume and Interview Preparation
-ï‚—Group Discussion Session
-ï‚—Team Building & Management Activities
-ï‚—Latest Market Tools TrainingBenefits Of Internship
-ï‚—Get Completion Certification
-ï‚—Get placement calls till gets placed
-ï‚—Get Job Recommendations
-ï‚—Hand On Live ProjectsContd..
-Contd..
-Thank Youâ€¦
+Seminar Report                                  Remote Installation of Software using  Private Cloud  
+1 
+ 1. Introduction  
+Cloud computing is the delivery of different services through the Internet.  It stores all 
+information in a cloud server instead of a regular computer.  Cloud computing is internet -
+based computing and if we want to use the features of cloud computing we just need a 
+browser installed on the computer to connect to the cloud. It prov ides clients with a virtual 
+infrastructure on which they simply store and run applications. With the traditional servers 
+if we want to run five applications then we need five servers but with the help of 
+virtualization techniques, we just need one server i n place of five. G -mail, Facebook, Google 
+docs, and YouTube are examples of cloud. This paper shows the implementation details of 
+creating a private cloud for college. It is a new approach that reduces capital cost and 
+expenditure costs. We do not need to take licensed software and will reduce the power, space, 
+and energy constraints. By moving to the cloud, businesses can  reduce their energy 
+consumption and carbon footprint by up to 90%.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 1: Cloud computing
+Management  
+VMs  
+VM 
+Instances  
+ Non 
+cloud  
+services  
+Cloud  
+platfo rm 
+Host OS  
+Hardware  
+Hypervisor  
+Specific purpose 
+hosts (e.g., Storage, 
+Load Balancer)  
+Networking Equipment  Seminar Report                                  Remote Installation of Software using  Private Cloud  
+2 
+ 2. Literature Survey  
+This review provides a thorough explanation of relevant prior work on this project. The 
+whole review includes documents, papers, and articles, published mostly since 2000.  
+Sonali Yadav [1] introduces cloud computing technology and its basic concepts. The 
+popularity of private clouds and their deployment is explained.  The pap er describes various 
+open -source software to deploy private clouds such as Eucalyptus, OpenStack , and Open 
+Nebula. A comparative study is made about these three open -source software's based on their 
+architectures. Cloud implementation, programming language , database compatibility, OS 
+compatibility of these software’s are mentioned.  
+Muhammad et. al. [2]  propose a process framework for supporting migration to cloud 
+computing and it is proposed that PaaS clouds would have long term commitments because 
+of unavailability of alternative solutions. To meet the quality effectively and efficiently, 
+cloud should support for defined SLA and this paper discusses Hackystat systems for 
+migration.  
+Wei Haoet. al. [3]  considered service and migration as a problem and proposed a framework 
+which facilitates service migration. They also designed a cost model and the decisi on 
+algorithm to determine the trade -offs on service migration and selection. The paper also 
+focuses on the placement of migrated services by considering the migration, maintenance 
+and communication costs.  
+Scott et. al. [4]  propose SMART decision framework  for migrating software testing 
+framework to the cloud and it is based on the SOA migration, Adoption and Reuse technique 
+(SMART). This SMART helps organizations to identify their current testing process and 
+also describe the requirements of the target clo ud computing environment for performing 
+software testing.  
+Bram et. al. [5]  presents a test method to determine the viability and value of deployment 
+in the cloud. The essential characteristics of the cloud discussed are on -demand, self -service, 
+broad netw ork access, resource pooling, rapid elasticity and measured service. The paper 
+also proposes a migration model called Adopted cloud migration toolkit.  
+Samreet. al. [6]  discussed a distributed high throughput data de -duplication algorithm. A 
+migration syste m called VMFlockMS is designed and implemented for flocks of virtual 
+machines and this VMFlockMS uses data de -duplication algorithm to reduce the volume of 
+data transferred over the network.  
+Rashmiet. al. [7]  discuss about Cloud offers like dynamic scalin g, high availability, multi -
+tenancy and effective resource allocation and the challenges for migration include business Seminar Report                                  Remote Installation of Software using  Private Cloud  
+3 
+ factors, technical factors and ease of implementation. A Five Phased Waterfall Model is 
+proposed which is based on the iterative waterfa ll model from software development life 
+cycle.  
+Timothy et. al. [8]  discuss Cloudnet, which is a prototype of cloud computing, and it 
+provides connectivity between the enterprise and data center sites. Cloudnet supports the 
+live WAN migration of virtual ma chines and WAN migration which handles the storage 
+with connections and memory state with minimal downtime even in the low bandwidth and 
+high latency settings. Cloudnet is optimized to minimize the amount of data transferred and 
+lowers both the migration t ime and application experienced downtime. Cloudnet supports 
+both synchronous and asynchronous disk replication.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Seminar Report                                  Remote Installation of Software using  Private Cloud  
+4 
+ 3. Motivation   
+Cloud computing is a new approach for solving the problems. The advantages of a private 
+cloud are that a college can design it for own purpose and change it over time to exactly what 
+they needed. The college can also control the quality of service provided . With the right 
+systems in place, security and regular information can be maintained. They will also give a 
+better service and worked in service level agreement. The implementation of private cloud 
+for organizations shows that organizations can reduce the ir expenditure cost as well as 
+capital cost. They can also reduce power, space and energy constraints. There is a limit 
+flexibility of scaling virtual machines.  
+3.1 Purpose  
+If an organization has only 2 to 3 computers, then manual software installation is  not an 
+issue. Things get complicated when the organizations are medium to big sized. Software 
+deployment involves multiple tasks like downloading the software from various vendor sites, 
+identifying the silent switches, storing the software in a specific s ystem location to silently 
+installing them on the client computers without interrupting regular tasks. It is undoubtedly 
+a never -ending and complex task, and all of these when done manually, will inevitably lead 
+to human errors.  
+ 3.2 Scope  
+D Y Patil College of Engineering on average, have around 2000 students from all parts of 
+India. ERP Software (CollPoll) of the college manages all the records of students, faculties 
+as well as all the other departments.  
+If any faculty leaves the college or any new f aculty joins, the admin can easily track their 
+records and data.   In the same way, if any student completes his B. E. and passed out from 
+university and the record of student is still on ERP and after one year from completed the 
+degree, now the registratio n number of student does not exist. Now there is a need of private 
+cloud for university, so that the record of students is available at a long time. Now if any 
+student wants any of his document urgently, he will just connect to private cloud of 
+university and download all the documents as needed.  
+ 3.3 Objective  
+The existence of this system is projected to have a considerable positive effect on the 
+convenience and manual work for the faculty and management of the DYPCOE IT Seminar Report                                  Remote Installation of Software using  Private Cloud  
+5 
+ Department, increasing the efficie ncy of the department. The benefits of a self -deployed 
+cloud platform are plenty. Benefits like efficiency and control, disaster recovery scalability, 
+security, privacy and compliance are offered by private cloud. From a faculty perspective, 
+hosting locall y is much less costly and easier to administrate than cloud solutions. The 
+security and ease of access to the department’s resources is to be acknowledged.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Seminar Report                                  Remote Installation of Software using  Private Cloud  
+6 
+ 4. Problem Definition  
+Resource sharing between members is an important function of any organization and this 
+process should be as fast and convenient as possible. When the resource sharing methods are 
+inefficient, the working of the organization becomes inefficient.  
+Considerin g a case study, in the IT department, when there is a need to install specific 
+software on all the computers in the laboratory, the current method involves installing the 
+software on each system manually, which becomes a time -consuming and inefficient task . 
+In the same way, if there is a requirement to format all the computers in the laboratory then 
+with the current method, each computer needs to be formatted separately. All of this requires 
+repetitive human effort leading to expenses paid by the college. A  solution to these problems 
+needs to be designed in such a way that remote installation and formatting of all the 
+computers is possible at the same time and with a single point of control.  
+Public clouds are hosted services available by cloud service provi ders on the internet. 
+Organizations that use web servers or application systems where security and compliance 
+requirements are not very rigid normally prefer to use public clouds. For example, public  
+cloud services are available in the form of web -based em ail, data storage or file transfers 
+over the internet, online office applications, web hosting and so on.  
+Contrary to the above, private clouds or enterprise clouds are used by organizations that have 
+security, compliance and data privacy as their top pri ority.  Private clouds offer increased 
+isolation and compatibility with more types of workloads.    Private clouds are deployed 
+inside firewalls and offer robust IT security for the organization. If a data center 
+infrastructure is already available with the organization the private cloud can be 
+implemented in -house. However, for having in -house private  clouds the organization needs 
+to invest heavily in running and maintaining the infrastructure which can result in significant 
+capital expenditure. This can be a major setback for organizations thinking about reducing 
+IT budgets. Private cloud services are  also made available by cloud service providers or data 
+centers. Examples of private cloud implementations can be easily found in areas such as 
+banking and financial institutions, large enterprise organizations, government organizations, 
+etc. where only au thorized users are able to access the system.  
+ 
+ 
+ 
+ 
+ Seminar Report                                  Remote Installation of Software using  Private Cloud  
+7 
+ 5. System Architecture  
+To manage all the resources, we will be developing architecture where all the faculties and 
+students can connect with each other. It will be a centralized system where the admin can 
+monitor all the resources software and hardware remotely.  
+ 
+ 
+Figure 2: System Block Diagram  
+ 
+5.1 OpenStack Architecture  
+Our proposed system architecture is based on OpenStack framework. This framework is 
+dependent on the networking environment.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 3: OpenStack System Architecture  
+Seminar Report                                  Remote Installation of Software using  Private Cloud  
+8 
+ 5.2  OpenStack Components  
+First,  we will see the OpenStack architecture which includes various components  such as:  
+1. Dashboard (Horizon) : It provides GUI to the users to handle the cloud and perform some 
+tasks like managing and monitoring the instances, creating  key pair for security, a ttached or 
+detached storage or volume to the instances and many more.  
+2. Keystone (Identity) : Keystone is a service of OpenStack that offers shared multi -tenant 
+authorization, service discovery, and API client authentication by implementing Identity API 
+of OpenStack. Commonly, it is an authentication system around the cloud OS.  
+3. Compute (Nova) : It handles the Virtual Machine created on cloud. It handles creations, 
+start and stop operations of instances and many more.  
+4. Image (Glance) : It’s like an index of Virtual Disk Images with which we can create 
+snapshots as a backup and use them when ever you want. Supported image formats are 
+QCOW2, VHD, ISO, VMDK, VDI  
+5. Networking (Neutron) : User can create our own network on cloud and  connect nodes 
+observers to the one or more network present in the organizations . 
+5.3 Cloud Architecture for College.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 4: Cloud Architecture for DYPCOE  
+ 
+This cloud is going to develop on blade servers present in the college data center or we can 
+also implement them on commodity hardware without spending any money on buying high 
+configured machines. Then students or teachers use this cloud in the Labs throu gh the local 
+Seminar Report                                  Remote Installation of Software using  Private Cloud  
+9 
+ network in their campus or they can also use it on their laptops or on mobiles through the 
+router configured in the same network. This cloud setup is limited to a single organization 
+and only the students and teachers who are present in that o rganization are authorized to 
+access cloud services. Every student or teacher must go through authentication process for 
+security purposes. We can make this cloud public also to use for other organizations but due 
+to privacy concern we prefer the Private c loud.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 5: Class diagram for department  
+ 
+ 
+Seminar Report                                  Remote Installation of Software using  Private Cloud  
+10 
+ 6. Use Case Diagram:  
+The below  use-case diagram describes the functions and scope of the system. It also 
+identifies the interactions between the system and its actors. It describes the use cases and 
+actors as well as what the system does and how the actor uses it.  
+ 
+ 
+Figure 6: Use-case Diagram  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Seminar Report                                  Remote Installation of Software using  Private Cloud  
+11 
+  
+      
+7. Design Details  
+The proposed system is implemented using open -source software called OpenStack and 
+Ubuntu operating system. The three nodes such as Compute, Controller, and Storage are 
+installed with Ubuntu server operating system because all these nodes have to behave like 
+servers as shown in Fig. 7. Compute node is installed with the Nova packages  and services. 
+The controller node is installed with the Glance, Keystone and Horizon packages and 
+services. The storage node is installed with the Swift or cinder packages and the services. 
+All three nodes are connected internally to OpenStack Dashboard w ith an internal network. 
+The Application which is ready to use the cloud service is connected through an external 
+network to the controller node of the private cloud.  
+Private Cloud Deployment According to the component of OpenStack, PC servers install 
+one of the OpenStack components, then all the servers can work together.  
+ 
+Controller Node  
+The installation of controller node starting with update and upgrade command. But before 
+starting implementation make sure that the controller node must have two NIC card s 
+(network interface card ). First NIC address save as a static IP and other one saves  as DHCP 
+(Dynamic Host Configuration Protocol ) and then start working with first database service is 
+SQL service and then step by step Message queue and RabbitMQ services.  Then NTP service 
+synchronizes the services among servers. Other servers follow the controller node for 
+synchronization. All the information entered while installation of OpenStack is stored in 
+SQL DB service, Message queue service work as message broker b etween machines. Once 
+we implement the basic services then remaining services Keystone, Glance, Nova, Neutron 
+and Horizon are installed step by step. These services are mandatory for installation of cloud. 
+Apart from this we can install other services as p er our need like Orchestration, Block 
+Storage, Telemetry and many more.  
+ 
+Compute Node  
+Compute node works on Nova service which is important and used to handle the instances 
+on cloud framework. RAM, Storage and Maintenance of instances is handled by compute  
+node. By default, Hypervisor of compute node is KVM ( Kernel -based Virtual Machine ). It 
+also works on networking for communication to the controller node. The power of cloud in Seminar Report                                  Remote Installation of Software using  Private Cloud  
+12 
+ terms of processing and storage increases by increasing more compute nodes in t he same 
+network. Once we done with successful installation of controller and compute node , we got 
+the dashboard of OpenStack Cloud from where we can manage our cloud framework. Then 
+we launch an instances on cloud and provide to the students for their lear ning courses. When 
+the cloud is setup in organizational environment then we can easily provide IAAS, PAAS 
+and SAAS services to the user. Due to this easy way of installation and proper utilization of 
+hardware and better services provided by cloud OpenStack  is the great learning methodology 
+for students.  
+ 
+Figure 7: OpenStack Implementation Architectu re  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Seminar Report                                  Remote Installation of Software using  Private Cloud  
+13 
+ 7. Conclusion  
+In this report, a solution has been proposed for the inefficient approach of manually installing 
+software on all computers of a laboratory. This private cloud solution will use the single 
+node multiple instances topology to remotely install software from one node computer to all 
+the computers at the same time. The advantages of using a private cloud over a public cloud  
+is discussed. This system uses  the open -source software OpenStack to create and manage 
+the private cloud. This approach will not only save time, expenditure cost and energy, but 
+also in crease security. This study  will also open new use cases for this project.   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Seminar Report                                  Remote Installation of Software using  Private Cloud  
+14 
+ 8. References  
+[1] Sonali Yadav, “Comparative Study on Open -Source Software for Cloud Computing 
+Platform: Eucalyptus, OpenStack and Open Nebula”, International Journal of Engineering 
+and Science, Vol.3, Issue 10 (October 2013), pp 51 -54, ISSN (e): 2278 -4721, ISSN (p):231 9-
+6483.  
+[2] Muhammad Aufeef Chauhan, Muhammad Ali Babar, “Migrating Service -Oriented 
+System to Cloud Computing: An Experience Report”, 4thInternational Conference on Cloud 
+Computing, Washington, DC, International Journal of Emerging Trends & Technology in  
+Computer Science (IJETTCS) Web Site: www.ijettcs.org Email: editor@ijettcs.org Volume 
+3, Issue 3, May – June 2014 ISSN 2278 -6856 Volume 3, Issue 3 May – June 2014 Page 145 
+4-9 July 2011, pp 404 -411, Print ISBN: 978 -1-4577 - 0836 -7, 
+DOI:10.1109/CLOUD.2011.4 6.  
+[3] Wei Hao, I -Ling Yen, Bhavani Thuraisingham, “Dynamic Service and Data Migration 
+in the Clouds”, 33rd Annual IEEE International Computer Software and Applications 
+Conference, Seattle, WA, 20 -24 July 2009, pp 134 -139, Print ISBN: 978 -0- 7695 -3726 -9, 
+DOI: 10.1109/COMPSAC.2009.127.  
+[4] Scott Tilley, Tauhida Parveen, “Migrating Software Testing to the Cloud”, IEEE 
+International Conference on Software Maintenance (ICSM), Timisoara, 12 -18 Sept. 2010, 
+pp 1, Print ISBN: 978 - 1-4244 -8630 -4, DOI:10.1109/ICSM. 2010.5610422.  
+[5] Bram Rogen, “Making the case for migration of information systems to the 
+cloud”,16thStudent Conference on IT, Enschede, The Netherlands, Jan 27, 2012, Copyright 
+2011, University of Twente, Faculty of Electrical Engineering, Mathematics a nd Computer 
+Science.  
+ [6] Samer Al -Kiswani, Dinesh Shubhravati, Prasenjit Sarkar, Matei Ripeanu, “VMFlock: 
+Virtual Machine Co -Migration for the Cloud”, 20thInternational Symposium on high 
+performance distributed computing, New York USA, 2011, pp 159 -170, P rint ISBN: 978 -1-
+4503 -0552 -5, DOI:10.1145/1996130.1996153.  
+[7] Rashmi, Dr. Shabana, Mahfuz, Dr. G. Sahoo, “A five -phased approach for the cloud 
+migration”, International Journal of Emerging Technology and Advanced Engineering, 
+April 2012, ISSN 2250 -2459. [8] Timothy Wood, Prashant Shenoy, K. K. Ramakrishnan Seminar Report                                  Remote Installation of Software using  Private Cloud  
+15 
+ Jacobus, V an der Merwe, “Cloudnet: Dynamic Pooling of Cloud Resources by Live WAN 
+Migration of Virtual Machines”, 7th ACM SIGPLAN/SIGOPS international conference on 
+Virtual execution environments Newpo rt Beach, California, USA, March 9 -11, 2011, pp121 -
+132, Print ISBN: 978 - 1-4503 -0687 -4, DOI:10.1145/1952682.1952699.  
+[8] Parastoo Mohagheghi, Thor Saether, “Software Engineering Challenges for Migration to 
+the Service Cloud Paradigm”,2011 IEEE World Congr ess on Services, Washington, DC, 4 -
+9 July 2011, pp 507 - 514, Print ISBN:978 -1-4577 -0879 - 4, 
+DOI:10.1109/SERVICES.2011.26.  
+[9] Konstantinos Oikonomou, Ioannis Stavrakakis, “Scalable Service Migration in 
+Autonomic Network Environments”, IEEE Journal on Selected Areas in communications, 
+New jersey, Jan2010, pp 84 - 94, ISSN:0733 - 8716, DOI:10.1109/JSAC.2010.100109.  
+[10] Jain, R. and Paul, S. Network Virtualization and Software Defined Networking for 
+Cloud Computing: A Survey. Communications Magazine, IEEE, 51 (11), 24 -31, 2013.  
+[11] Younge, A. J., Henschel, R., Brown, J. T., Laszewski, G. v., Qiu, J. and Fox, G. C. 
+Analysis of Vir tualization Technologies for High Performance Computing Environments. In 
+Proceedings of the Cloud Computing (CLOUD),2011 IEEE International Conference on 
+(Washington, DC, 2011).  
+[12] https://www.openstack.org/  
+[13] https://www.redhat.com/en/technologies/linux -platforms/openstack -platform  
+[14] https://docs.openstack.org/security -threat -analysis/architecture -diagramguidance.html  
+ 
+ 
+ 
+ 
+ 
+ 
+ Seminar Report                                  Remote Installation of Software using  Private Cloud  
+16 
+  
+9. Plagiarism Check report:  
+ 
+ 
+ 
+ 
+    
+    
+    
+    
+    
+    
+ 
