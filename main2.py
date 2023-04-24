@@ -18,13 +18,6 @@ def get_binary_file_downloader_html(bin_file, file_label='File'):
     bin_str = base64.b64encode(data).decode()
     return f'<a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}"><input type="button" value="Download"></a>'
 
-
-st.markdown("<h1 style='text-align: center; color: black; ''> Digital to Handwritten text  <br><br> No more Handwritten Assignments   \U0000270D </h1>",
-            unsafe_allow_html=True)
-
-st.markdown("<h3 style='text-align: right; color: black;'><b>by Divy Mohan Rai</b></h3>",
-            unsafe_allow_html=True)
-
 main_bg = "./images/t2.jpg"
 
 main_bg_ext = "jpg"

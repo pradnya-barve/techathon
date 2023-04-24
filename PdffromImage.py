@@ -1,6 +1,5 @@
 from PIL import Image
 import sys
-import cv2
 import os
 import time
 import unicodedata
