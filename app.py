@@ -142,6 +142,7 @@ if uploaded_file is not None:
 
     # user presses convert
     if convert_button:
+        st.progress()
 
         lines = raw_text.split("\n")  # splitting text on the basis of new line
 

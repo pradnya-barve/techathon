@@ -103,3 +103,4 @@ wincertstore==0.2
 yarg==0.1.9
 zipp==3.4.0
 PyPDF2==2.11.0
+pytesseract==0.3.10
