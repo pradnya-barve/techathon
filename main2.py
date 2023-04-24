@@ -63,7 +63,7 @@ root_font = "./Fonts/"
 # Upload text file functionality
 img = None
 uploaded_file = st.file_uploader(
-    "Choose a text file...", type=["txt", "docx"])
+    "Choose a text file...", type=["txt", "docx", "pdf"])
 
 show_file = st.empty()
 
