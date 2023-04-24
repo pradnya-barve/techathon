@@ -103,3 +103,7 @@ streamlit==0.86.0
 # zipp==3.4.0
 PyPDF2==2.11.0
 pytesseract==0.3.10
+
+
+# freeglut3-dev
+# libgtk2.0-dev
