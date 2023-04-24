@@ -49,11 +49,23 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.title("Assignments writter!")
+
 
 # creating a side bar for picking the style of image
 style_name = st.sidebar.selectbox(
     'Select HandWriting',
     ("Normal", "Clean", "Normal-with-italic", "Messy", "Bold")
+)
+
+page_type = st.sidebar.selectbox(
+    'Select Page Type',
+    ("A4", "A5", "A6")
+)
+
+ink_color = st.sidebar.selectbox(
+    'Select Ink Color',
+    ("Black", "Blue", "Green", "Red")
 )
 
 root_style = "./images/"
