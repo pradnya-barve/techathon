@@ -49,7 +49,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Assignments writter!")
+st.title("LazyLearn (Assignments writter!)")
 
 
 # creating a side bar for picking the style of image
@@ -68,6 +68,29 @@ ink_color = st.sidebar.selectbox(
     ("Black", "Blue", "Green", "Red")
 )
 
+page_margin = st.sidebar.selectbox(
+    'Select Page Margin',
+    ("Small", "Medium", "Large")
+)
+
+if page_margin is not None:
+    if page_margin == "Small":
+        dt.margin = '115'
+    elif page_margin == "Medium":
+        dt.margin = '150'
+    elif page_margin == "Large":
+        dt.margin = '200'
+    else:
+        dt.margin = '115'
+
+wordsPerLine = st.sidebar.selectbox(
+    'Select Words Per Line',
+    ("Small(60)", "Medium(75)", "Large(90)")
+)
+
+
+lineGap = st.sidebar.slider('Select Line Gap', 0, 200, 120)
+
 root_style = "./images/"
 path_style = os.path.join(root_style, style_name+".jpg")
 root_font = "./Fonts/"
@@ -82,10 +105,13 @@ show_file = st.empty()
 # checking if user has uploaded any file
 if not uploaded_file:
     show_file.info(
-        "Please Upload the text/docx document (no .doc only .docx and .txt) ")
+        "Please Upload the text/docx/pdf document (no .doc only .docx and .txt) ")
 
 
 if uploaded_file is not None:
+
+    # displaying the image
+    st.markdown("Choosen Handwriting is")
 
     st.image(path_style, caption='Choosen Handwriting', use_column_width=True)
 
