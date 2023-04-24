@@ -122,11 +122,13 @@ if uploaded_file is not None:
         dt.maxLenPerPage = 3349
         dt.pageNum = 1
 
+
         dt.FontType = os.path.join(root_font, style_name)
 
         dt.lineGap = 120
         dt.writing = style_name
 
+        
         # Initializing x and y
         dt.x, dt.y = dt.margin + 20, dt.margin + dt.lineGap
 
