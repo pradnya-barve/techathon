@@ -13,7 +13,7 @@
 # certifi==2020.6.20
 # cffi==1.14.4
 # chardet==4.0.0
-click==7.1.2
+
 # colorama==0.4.4
 # configparser==5.0.1
 # decorator==4.4.2
@@ -82,7 +82,9 @@ Pillow==8.0.1
 # six==1.15.0
 # smmap==3.0.4
 # sortedcontainers==2.3.0
+click==7.1.2
 streamlit==0.86.0
+click==7.1.2
 # terminado==0.9.1
 # testpath==0.4.4
 # toml==0.10.2
