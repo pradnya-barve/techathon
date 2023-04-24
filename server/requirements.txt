@@ -2,3 +2,7 @@ python-multipart==0.0.6
 streamlit==1.21.0
 calligraphy
 PyPDF2==2.11.0
+pywhatkit
+pytesseract
+Pillow
+fpdf
