@@ -54,7 +54,7 @@ st.markdown(
 # creating a side bar for picking the style of image
 style_name = st.sidebar.selectbox(
     'Select HandWriting',
-    ("Style-1", "Style-2", "Style-3", "Style-4", "Style-5")
+    ("normal-with-straight", "normal-with-formal", "normal-with-italic", "small-with-straight", "normal-with-bold")
 )
 root_style = "./images/"
 path_style = os.path.join(root_style, style_name+".jpg")
@@ -74,6 +74,7 @@ if not uploaded_file:
 
 
 if uploaded_file is not None:
+    st.write("Selected handwriting style is: ", style_name)
 
     st.image(path_style, caption='Choosen Handwriting', use_column_width=True)
 
