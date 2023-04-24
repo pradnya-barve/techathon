@@ -24,7 +24,7 @@ def main():
         st.write('Selected Image is')
         st.image(img, caption=f"Image {uploaded_file.name}")
         ocrText = pytesseract.image_to_string(img, timeout=5)
-        st.write("OCR Result:", ocrText)
+        # st.write("OCR Result:", ocrText)
         st.write("")
 
         # Add a button to download the OCR result as a text file

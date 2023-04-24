@@ -61,7 +61,7 @@ pipreqs==0.4.10
 prometheus-client==0.9.0
 prompt-toolkit==3.0.8
 protobuf==3.14.0
-pyarrow==2.0.0
+# pyarrow==2.0.0
 pycodestyle==2.6.0
 pycparser==2.20
 pycryptodome==3.9.9
