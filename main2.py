@@ -53,7 +53,7 @@ st.markdown(
 # creating a side bar for picking the style of image
 style_name = st.sidebar.selectbox(
     'Select HandWriting',
-    ("Style-1", "Style-2", "normal-with-italic", "Style-4", "Style-5")
+    ("Normal", "Clean", "Normal-with-italic", "Messy", "Bold")
 )
 
 root_style = "./images/"
