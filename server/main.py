@@ -94,6 +94,11 @@ st.write("upload your document and get it converted to handwritting")
 
 file = st.file_uploader("upload your document", type=["pdf", "docx", "txt","png","jpg","jpeg"])
 
+style_name = st.sidebar.selectbox(
+    'Select HandWriting',
+    ("Style-1", "Style-2", "Style-3", "Style-4", "Style-5")
+)
+
 if file is not None:
     # print file details
     if file.type == "application/pdf":
