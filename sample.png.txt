@@ -1,0 +1,23 @@
+Steps to Convert PDF to TXT in Python
+
+Without any further ado, let’s get started with the steps to convert pdf to txt.
+
+Step 01 — Create a PDF file (or Find an existing one)
+
+> Openanew Word document.
+> Type in some content of your choice in the word document.
+> Now to File > Print > Save.
+
+> Remember to save your pdf file in the same location where you save your python
+script File.
+
+> Now your .pdf file is created and saved which you will later convert into a .txt file.
+
+Step 02 - Install PyYPDF2
+
+install an external module named PyPDF2.
+
+ 
+
+> First, we wil
+
