@@ -34,7 +34,7 @@ def get_binary_file_downloader_html(bin_file, file_label='File'):
     bin_str = base64.b64encode(data).decode()
     return f'<a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}"><input type="button" style="background-color:#fa5f2f; color:white" value="DOWNLOAD"></a>'
 
-main_bg = "./images/t2.jpg"
+main_bg = "./images/t3.jpg"
 
 main_bg_ext = "jpg"
 
