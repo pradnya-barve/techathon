@@ -11,10 +11,11 @@ import docx2txt
 from PIL import ImageFile
 import PyPDF2
 ImageFile.LOAD_TRUNCATED_IMAGES = True
+import time
 
 
 
-@st.cache
+@st.cache_data
 def pdfToText(path):
     pdfreader = PyPDF2.PdfFileReader(path)
     no_of_pages = pdfreader.numPages
@@ -128,8 +129,10 @@ if uploaded_file is not None:
     size = f' Input File Size in MegaBytes is {"{0:.4f}".format(uploaded_file.size / (1024 * 1024))}'
     st.markdown("%s" % size,
                 unsafe_allow_html=True)
-
-    name, _ = uploaded_file.name.split('.')
+    try:
+        name, _ = uploaded_file.name.split('.')
+    except:
+        st.error("File Name is Not Valid")
 
     convert_button = st.button("Convert")
 
@@ -140,6 +143,14 @@ if uploaded_file is not None:
 
         processing_text = st.subheader("Processing...")
 
+        # progress_text = "Processing..."
+        my_bar = st.progress(0, text='')
+
+        for percent_complete in range(50):
+            time.sleep(0.1)
+            my_bar.progress(percent_complete + 1, text='')
+
+        
         lines = raw_text.split("\n")  # splitting text on the basis of new line
 
         dt.background = Image.open("./images/a4.jpg")
@@ -189,6 +200,7 @@ if uploaded_file is not None:
                         unsafe_allow_html=True)
             if processing_text:
                 processing_text.empty()
+                my_bar.empty()
             processing_text.subheader("File is ready! Click below to download")
 
             st.markdown(get_binary_file_downloader_html(
