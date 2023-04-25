@@ -15,7 +15,7 @@ pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
 
 
 def main():
-    st.title("OCR Images")
+    st.title("lazylearn(Text Extracter From Image)")
     
     uploaded_file = st.file_uploader("Upload your images:", type=["png", "jpg", "jpeg", "gif"])
     
@@ -33,6 +33,9 @@ def main():
         text_file.close()
         st.download_button(label="Download as Text file", data=ocrText, file_name=f"{uploaded_file.name}.txt", mime="text/plain")
     
+        # if file exist in main directory remove it
+        
+
 
 if __name__ == "__main__":
     main()
