@@ -52,47 +52,11 @@ st.markdown(
 
 st.title("WriteMate - Text to Handwriting")
 
-# creating a side bar for picking the style of image
-style_name = st.sidebar.selectbox(
-    'Select HandWriting',
-    ("Normal", "Clean", "Normal-with-italic", "Messy", "Bold")
-)
-
-page_type = st.sidebar.selectbox(
-    'Select Page Type',
-    ("A4", "A5", "A6")
-)
-
-ink_color = st.sidebar.selectbox(
-    'Select Ink Color',
-    ("Black", "Blue", "Green", "Red")
-)
-
-page_margin = st.sidebar.selectbox(
-    'Select Page Margin',
-    ("Small", "Medium", "Large")
-)
-
-if page_margin is not None:
-    if page_margin == "Small":
-        dt.margin = '115'
-    elif page_margin == "Medium":
-        dt.margin = '150'
-    elif page_margin == "Large":
-        dt.margin = '200'
-    else:
-        dt.margin = '115'
-
-wordsPerLine = st.sidebar.selectbox(
-    'Select Words Per Line',
-    ("Small(60)", "Medium(75)", "Large(90)")
-)
 
 
-lineGap = st.sidebar.slider('Select Line Gap', 0, 200, 120)
 
 root_style = "./images/"
-path_style = os.path.join(root_style, style_name+".jpg")
+# path_style = os.path.join(root_style, style_name+".jpg")
 root_font = "./Fonts/"
 
 # Upload text file functionality
@@ -109,6 +73,47 @@ if not uploaded_file:
 
 
 if uploaded_file is not None:
+
+    # creating a side bar for picking the style of image
+    style_name = st.selectbox(
+        'Select HandWriting',
+        ("Normal", "Clean", "Normal-with-italic", "Messy", "Bold")
+    )
+    with st.expander("Customize"):
+        page_type = st.selectbox(
+            'Select Page Type',
+            ("A4", "A5", "A6")
+        )
+
+        ink_color = st.selectbox(
+            'Select Ink Color',
+            ("Black", "Blue", "Green", "Red")
+        )
+
+        page_margin = st.selectbox(
+            'Select Page Margin',
+            ("Small", "Medium", "Large")
+        )
+
+        wordsPerLine = st.selectbox(
+        'Select Words Per Line',
+        ("Small(60)", "Medium(75)", "Large(90)")
+        )
+        lineGap = st.slider('Select Line Gap', 0, 200, 120)
+
+    path_style = os.path.join(root_style, style_name+".jpg")
+
+    if page_margin is not None:
+        if page_margin == "Small":
+            dt.margin = '115'
+        elif page_margin == "Medium":
+            dt.margin = '150'
+        elif page_margin == "Large":
+            dt.margin = '200'
+        else:
+            dt.margin = '115'
+
+
     ###########################
     # file_details = {"Filename": uploaded_file.name,
     #                 "FileType": uploaded_file.type}
