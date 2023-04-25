@@ -32,7 +32,7 @@ def get_binary_file_downloader_html(bin_file, file_label='File'):
     with open(bin_file, 'rb') as f:
         data = f.read()
     bin_str = base64.b64encode(data).decode()
-    return f'<a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}"><input type="button" value="Download"></a>'
+    return f'<a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}"><input type="button" style="background-color:#fa5f2f; color:white" value="DOWNLOAD"></a>'
 
 main_bg = "./images/t2.jpg"
 
@@ -49,8 +49,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("LazyLearn (Assignments writter!)")
-
+st.title("WriteMate - Text to Handwriting")
 
 # creating a side bar for picking the style of image
 style_name = st.sidebar.selectbox(
@@ -109,16 +108,10 @@ if not uploaded_file:
 
 
 if uploaded_file is not None:
-
-    # displaying the image
-    st.markdown("Choosen Handwriting is")
-
-    st.image(path_style, caption='Choosen Handwriting', use_column_width=True)
-
     ###########################
-    file_details = {"Filename": uploaded_file.name,
-                    "FileType": uploaded_file.type}
-    st.write(file_details)
+    # file_details = {"Filename": uploaded_file.name,
+    #                 "FileType": uploaded_file.type}
+    # st.write(file_details)
 
     if uploaded_file.type == "text/plain":
         raw_text = str(uploaded_file.read(), "utf-8")
@@ -138,10 +131,14 @@ if uploaded_file is not None:
 
     name, _ = uploaded_file.name.split('.')
 
-    convert_button = st.button("Convert To Text")
+    convert_button = st.button("Convert")
+
+    
 
     # user presses convert
     if convert_button:
+
+        processing_text = st.subheader("Processing...")
 
         lines = raw_text.split("\n")  # splitting text on the basis of new line
 
@@ -190,6 +187,15 @@ if uploaded_file is not None:
             s = f'Output File Size in MegaBytes is {"{0:.2f}".format(size_file)}'
             st.markdown("%s" % s,
                         unsafe_allow_html=True)
+            if processing_text:
+                processing_text.empty()
+            processing_text.subheader("File is ready! Click below to download")
 
             st.markdown(get_binary_file_downloader_html(
                 final_path, file_label='File'), unsafe_allow_html=True)
+
+
+    # displaying the image
+    st.subheader("Chosen Handwriting is")
+
+    st.image(path_style, caption='Chosen Handwriting', use_column_width=True)

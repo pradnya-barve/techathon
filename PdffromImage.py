@@ -4,6 +4,7 @@ import os
 import time
 import unicodedata
 from concatenate_images import get_concat_v
+# import random
 
 background = Image.open("./images/a4.jpg")
 SheetWidth = background.width
@@ -74,6 +75,10 @@ def ProcessNwrite(word):
     global x, y, background, pageNum, writing, margin, lineGap, wasDQ, wasSQ
 
     check_pageExceed(word)
+
+    # if (errorVal):
+    #     writeAlphabet("./images/error1.png")
+    #     return
 
     # change Line function
     if x > SheetWidth - wordsPerLine*len(word):
@@ -158,7 +163,6 @@ def ProcessNwrite(word):
         else:
             writeAlphabet("./images/space.png")
 
-
 def writeByLine(data):
     global x, y, background, pageNum, writing
 
@@ -178,6 +182,12 @@ def do_work(content, name):
 
     blank_line = 0
 
+    # randomNum = 1000
+
+    # if (len(content) > 20):
+    #     randomNum = random.randint(20, len(content))
+    #     print(randomNum)
+
     for i in range(len(content)):
 
         content[i] = unicodedata.normalize("NFKD", content[i])
@@ -190,6 +200,13 @@ def do_work(content, name):
         if blank_line > 1:
             continue
 
+        # print("i is" , i, " and content is ", content[i])
+        # if (i == randomNum):
+        #     # print("going to write error")
+        #     writeByLine("", True)
+        #     # randomNum = random.randint(i+1, len(content))
+        
+    
         writeByLine(content[i])
         newLine()
 
