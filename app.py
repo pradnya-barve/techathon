@@ -15,7 +15,7 @@ import time
 
 
 
-@st.cache_data
+# @st.cache_data
 def pdfToText(path):
     pdfreader = PyPDF2.PdfFileReader(path)
     no_of_pages = pdfreader.numPages
