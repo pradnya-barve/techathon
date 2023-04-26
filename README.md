@@ -1,2 +1,0 @@
-# techathon
-# dyp techthon
