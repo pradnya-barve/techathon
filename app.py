@@ -39,18 +39,18 @@ main_bg = "./images/t2.jpg"
 
 main_bg_ext = "jpg"
 
-# st.markdown(
-#     f"""
-#     <style>
-#     .reportview-container {{
-#         background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
-#     }}
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
+try:
+    st.set_page_config(
+        page_title='WriteMate',
+        page_icon='📃'
+    )
+except Exception as e:
+    pass
 
-st.title("WriteMate - Text to Handwriting")
+st.markdown("""
+        # :outbox_tray: WriteMate - Text to Handwriting :outbox_tray:
+    """)
+
 
 # creating a side bar for picking the style of image
 style_name = st.sidebar.selectbox(
@@ -126,7 +126,8 @@ if uploaded_file is not None:
 
     ###########################
 
-    size = f' Input File Size in MegaBytes is {"{0:.4f}".format(uploaded_file.size / (1024 * 1024))}'
+    size = f'Uploaded File Size: {uploaded_file.size / (1024 * 1024):.2f} Mb'
+
     st.markdown("%s" % size,
                 unsafe_allow_html=True)
     try:
@@ -195,7 +196,8 @@ if uploaded_file is not None:
 
             size_file = file_stats.st_size / (1024 * 1024)
 
-            s = f'Output File Size in MegaBytes is {"{0:.2f}".format(size_file)}'
+            s = f'Output File Size: {size_file:.2f} Mb'
+
             st.markdown("%s" % s,
                         unsafe_allow_html=True)
             if processing_text:
