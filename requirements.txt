@@ -1,0 +1,8 @@
+docx2txt==0.8
+pandas==1.2.0
+# click==7.1.2
+streamlit==0.86.0
+# click==7.1.2
+PyPDF2==2.11.0
+pytesseract==0.3.10
+protobuf==3.14.0
