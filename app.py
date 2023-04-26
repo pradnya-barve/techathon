@@ -144,7 +144,7 @@ if uploaded_file is not None:
         processing_text = st.subheader("Processing...")
 
         # progress_text = "Processing..."
-        my_bar = st.progress(0, text='')
+        my_bar = st.progress(0)
 
         for percent_complete in range(50):
             time.sleep(0.1)
