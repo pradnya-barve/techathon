@@ -148,7 +148,7 @@ if uploaded_file is not None:
 
         for percent_complete in range(50):
             time.sleep(0.1)
-            my_bar.progress(percent_complete + 1, text='')
+            my_bar.progress(percent_complete + 1)
 
         
         lines = raw_text.split("\n")  # splitting text on the basis of new line
